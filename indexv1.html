@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title data-i18n="html_title_planets">GLORIA Solar Observations: Wolf Number</title>
+        <meta name="description" content="Drawing on all-sky images to track planetary motion">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="css/dark.css">
+        <link rel="stylesheet" type="text/css" href="css/ui-lightness/jquery-ui-1.9.2.custom.min.css">
+
+        <script type="text/javascript" src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script type="text/javascript" src="js/vendor/jquery-1.8.3.min.js"></script>
+        <script type="text/javascript" src="js/vendor/jquery-ui-1.9.2.custom.min.js"></script>
+
+        <script type="text/javascript" src="js/vendor/json2.min.js"></script>
+        <script type="text/javascript" src="js/vendor/raphael.js"></script>
+        <script type="text/javascript" src="js/vendor/base64.js"></script>
+
+        <script type="text/javascript" src="locales/en.js"></script>
+        <script type="text/javascript" src="js/i18n.js"></script>
+        <script type="text/javascript" src="js/functions.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                if (getURLParameter("css")==="light"){
+                    if (document.createStyleSheet){
+                        document.createStyleSheet('css/light.css');
+                    } else {
+                        $("head").append($("<link rel='stylesheet' href='css/light.css' type='text/css' media='screen' />"));
+                    }
+                }
+                checkSourceURL();
+            });
+        </script>
+        <link rel="stylesheet" type="text/css" href="css/red.css">
+
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div id="wrapper">
+            
+            <div id="header">
+                <p data-i18n="content_title">Solar Observations</p>
+
+<!--              <div id="left-controls">
+                    <span id="back5"><<</span>
+                    <span id="back1"><</span>
+                 </div>
+
+                 <div id="slider"></div> -->
+
+                 <div id="wolf">
+                    <p id="wolf-contents">Double-click to mark a sunspot group.</p>
+                 </div>
+
+                 <div id="info">i</div>
+                 <div id="undo" title="Undo">&larr;</div>
+            </div>
+            
+            <div id="skymap"></div>
+            <div id="paper"></div>
+            <div id="about">
+                <h3 data-i18n="about_planets_title">About this tool.</h3>
+                <p data-i18n="about_planets_p1">This tool calculates the <a href="http://en.wikipedia.org/wiki/Wolf_number">Wolf Number</a>, an indicator of Solar activity based on the number and grouping of sunspots.</p>
+                <p data-i18n="about_planets_p2">Double-click to add a new group, click-and-drag to move groups around.</p>
+                <p data-i18n="about_planets_p3">Use the plus and minus buttons to add or remove sunspots from each group and calculate the Wolf Number.</p>
+            </div>
+
+            <div id="footer">
+                <p class="left"><a href="http://gloria-project.eu/en/" target="_blank">GLORIA</a> <span data-i18n="component_name">Solar/Wolf Number Component</span>
+
+                <p class="right">
+                    <span data-i18n="image_source">Image source</span>  <select id="data-source">
+                        <option value="default" data-i18n="default" selected="selected">Default (Miquel)</option>
+                        <option value="http://farm9.staticflickr.com/8352/8375736994_46ac356031_c.jpg" data-i18n="default">2013-01-12 (Flickr gre99qd)</option>
+                        <option value="http://farm6.staticflickr.com/5225/5628268360_c28c9f8fc6_b.jpg" data-i18n="default">2011-04-17 (John Houghton)</option>
+                    </select>
+                </p>
+            </div>
+
+        </div>
+
+        <form id="secret-form" action="save.php" method="post">
+            <input type="hidden" name="data" />
+            <input type="submit" value="Save" />
+        </form>
+
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/i18n.js"></script>
+        <script type="text/javascript">
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-38446035-1']);
+          _gaq.push(['_setDomainName', 's3.amazonaws.com']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+
+        </script>
+    </body>
+</html>

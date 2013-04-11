@@ -1,0 +1,29 @@
+div#right-controls span, div#left-controls span {
+    background-color: #4983DF;
+}
+
+div#right-controls span:hover, div#left-controls span:hover {
+    background-color: #7ACDFF;
+}
+
+div#header #slider .ui-slider-range {
+    background: #777777;
+}
+
+div#header #slider .ui-slider-handle {
+    border-color: #ffffff;
+    background: #4983DF;
+    outline: none;
+    cursor: pointer;
+}
+
+div#header #slider .ui-slider-handle:hover {
+    background: #7ACDFF;
+}
+div#footer a {
+    color: #4983DF;
+}
+
+div#footer a:hover {
+    color: #7ACDFF;
+}
