@@ -90,7 +90,7 @@ $('#paper').on('dblclick', function(evt) {
   .click(function () {
     num = parseInt(text.attr('text'));
     text.attr('text', num+1);
-    updateQuick()();
+    updateQuick();
   });
 
   tplus = sketchpad.text(x+20, y-4, "+").attr({fill: '#ffffff'})
@@ -120,7 +120,7 @@ $('#paper').on('dblclick', function(evt) {
   text.id = "number_"+marker_count;
 
   c.node.setAttribute('class', "button set-"+marker_count);
-  text.node.setAttribute('class', "text button set-"+marker_count);
+  text.node.setAttribute('class', "text maintext button set-"+marker_count);
   cplus.node.setAttribute('class', "button set-"+marker_count);
   tplus.node.setAttribute('class', "button set-"+marker_count);
   cminus.node.setAttribute('class', "button set-"+marker_count);
@@ -139,4 +139,12 @@ $('#paper').on('dblclick', function(evt) {
 
 $("#undo").click( function() {
   undo();
+});
+
+$('input[name="finish"]').click(function (){
+  postMarkersAndSave(window.imageID)
+});
+
+$('input[name="save"]').click(function (){
+  postMarkers(window.imageID)
 });

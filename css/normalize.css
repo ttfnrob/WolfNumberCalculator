@@ -404,6 +404,20 @@ input {
     line-height: normal;
 }
 
+input[type="button"] {
+    background-color: #3072CF;
+    height: 24px;
+    font-size: 12px;
+    cursor: pointer;
+    color: #ffffff;
+    text-align: center;
+    margin: 0 5px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    border: 1px solid white;
+}
+
 /*
  * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
  *    and `video` controls.

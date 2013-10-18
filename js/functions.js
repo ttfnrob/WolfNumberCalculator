@@ -88,3 +88,8 @@ function loadURL() {
   }
 }
 
+function resetImage(){
+  $(".button").remove();
+  marker_count = 0;
+  updateQuick();
+}

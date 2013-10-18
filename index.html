@@ -38,6 +38,7 @@
                     }
                 }
                 checkSourceURL();
+                setupExperiment();
             });
         </script>
         <link rel="stylesheet" type="text/css" href="css/red.css">
@@ -81,13 +82,8 @@
                 <p class="left"><a href="http://gloria-project.eu/en/" target="_blank">GLORIA</a> <span data-i18n="component_name">Solar/Wolf Number Component</span>
 
                 <p class="right">
-                    <span data-i18n="image_source">Image source</span>  <select id="data-source">
-                        <option value="default" data-i18n="default" selected="selected">2003-10-28 (SOHO)</option>
-                        <option value="http://sohowww.nascom.nasa.gov/data/realtime/hmi_igr/1024/latest.jpg" data-i18n="live">Live Solar Image (SOHO)</option>
-                        http://sohowww.nascom.nasa.gov/data/realtime/hmi_igr/1024/latest.jpg
-                        <option value="http://farm9.staticflickr.com/8352/8375736994_46ac356031_c.jpg" data-i18n="gre99qd">2013-01-12 (Flickr gre99qd)</option>
-                        <option value="http://farm6.staticflickr.com/5225/5628268360_c28c9f8fc6_b.jpg" data-i18n="johnhoughton">2011-04-17 (John Houghton)</option>
-                    </select>
+                    <input type="button" id="save" name="save" value="Save" />
+                    <input type="button" id="finish" name="finish" value="Finish" />
                 </p>
             </div>
 
